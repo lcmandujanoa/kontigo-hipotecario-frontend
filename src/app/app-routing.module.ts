@@ -1,31 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SigninComponent } from './components/auth/signin/signin.component';
-import { SignupComponent } from './components/auth/signup/signup.component';
-import { HomeComponent } from './components/home/home.component';
+import { AuthRoutingModule } from './auth/auth-routing.module';
+import { PagesRoutingModule } from './pages/pages-routing.module';
+
+import { NopageFoundComponent } from './nopage-found/nopage-found.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/signin',
+    redirectTo: '/login',
     pathMatch: 'full'
   },
   {
-    path: 'signin',
-    component: SigninComponent
-  },
-  {
-    path: 'signup',
-    component: SignupComponent
-  },
-  {
-    path: 'home',
-    component: HomeComponent
+    path: '**',
+    component: NopageFoundComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    AuthRoutingModule,
+    PagesRoutingModule,
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
