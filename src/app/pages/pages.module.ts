@@ -7,8 +7,10 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ProductosComponent } from './productos/productos.component';
 import { PagesComponent } from './pages.component';
 import { RouterModule } from '@angular/router';
-import { ClientComponent } from './clients/client/client.component';
-import { ClientListComponent } from './clients/client-list/client-list.component';
+// import { ClientComponent } from './clients/client/client.component';
+// import { ClientListComponent } from './clients/client-list/client-list.component';
+import { OperationComponent } from './operations/operation/operation.component';
+import { OperationListComponent } from './operations/operation-list/operation-list.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +18,10 @@ import { ClientListComponent } from './clients/client-list/client-list.component
     UsuariosComponent,
     ProductosComponent,
     PagesComponent,
-    ClientComponent,
-    ClientListComponent
+    // ClientComponent,
+    // ClientListComponent,
+    OperationComponent,
+    OperationListComponent
   ],
   imports: [
     CommonModule,

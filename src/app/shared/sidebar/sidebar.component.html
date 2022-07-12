@@ -44,23 +44,23 @@
         </li> -->
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-house-user"></i>
+            <i class="nav-icon fas fa-folder"></i>
             <p>
-              Clientes
+              Operaciones
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a routerLink="/clients/client" class="nav-link" style="cursor: pointer;">
-                <i class="fas fa-user-plus nav-icon"></i>
-                <p> Ingresar cliente</p>
+              <a routerLink="/operations/operation" class="nav-link" style="cursor: pointer;">
+                <i class="fas fa-folder-plus nav-icon"></i>
+                <p> Registrar operación</p>
               </a>
             </li>
             <li class="nav-item">
-              <a routerLink="/clients" class="nav-link" style="cursor: pointer;">
-                <i class="fas fa-users nav-icon"></i>
-                <p> Consultar clientes</p>
+              <a routerLink="/operations" class="nav-link" style="cursor: pointer;">
+                <i class="fas fa-folder-open nav-icon"></i>
+                <p> Consultar operaciones</p>
               </a>
             </li>
           </ul>
@@ -68,9 +68,7 @@
         <li class="nav-item">
           <a class="nav-link" style="cursor: pointer;" (click)="logOut()">
             <i class="nav-icon fas fa-sign-out-alt"></i>
-            <p>
-              Logout
-            </p>
+            <p> Salir </p>
           </a>
         </li>
       </ul>

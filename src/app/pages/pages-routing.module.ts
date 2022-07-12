@@ -5,18 +5,28 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ProductosComponent } from './productos/productos.component';
-import { ClientComponent } from './clients/client/client.component';
-import { ClientListComponent } from './clients/client-list/client-list.component';
+// import { ClientComponent } from './clients/client/client.component';
+// import { ClientListComponent } from './clients/client-list/client-list.component';
+import { OperationListComponent } from './operations/operation-list/operation-list.component';
+import { OperationComponent } from './operations/operation/operation.component';
 
 const routes: Routes = [
   {
-    path: 'clients',
+    path: 'operations',
     component: PagesComponent,
     children: [
-      { path: '', component: ClientListComponent },
-      { path: 'client', component: ClientComponent }
+      { path: '', component: OperationListComponent },
+      { path: 'operation', component: OperationComponent }
     ]
   },
+  // {
+  //   path: 'clients',
+  //   component: PagesComponent,
+  //   children: [
+  //     { path: '', component: ClientListComponent },
+  //     { path: 'client', component: ClientComponent }
+  //   ]
+  // },
   {
     path: 'dashboard',
     component: PagesComponent,
