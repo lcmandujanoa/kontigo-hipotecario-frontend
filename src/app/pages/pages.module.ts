@@ -11,6 +11,8 @@ import { RouterModule } from '@angular/router';
 // import { ClientListComponent } from './clients/client-list/client-list.component';
 import { OperationComponent } from './operations/operation/operation.component';
 import { OperationListComponent } from './operations/operation-list/operation-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { OperationListComponent } from './operations/operation-list/operation-li
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    HttpClientModule,
     SharedModule,
     RouterModule
   ],
