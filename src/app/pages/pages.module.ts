@@ -13,6 +13,7 @@ import { OperationComponent } from './operations/operation/operation.component';
 import { OperationListComponent } from './operations/operation-list/operation-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AuthGuard } from '../guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,9 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     UsuariosComponent,
     ProductosComponent
+  ],
+  providers: [
+    AuthGuard
   ]
 })
 export class PagesModule { }

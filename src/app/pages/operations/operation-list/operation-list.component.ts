@@ -19,7 +19,7 @@ export class OperationListComponent implements OnInit {
 
   OBTENER_OPERACIONES() {
     this.OPERATION_SERVICE.OBTENER_OPERACIONES().subscribe({
-      next: (res) => {
+      next: (res) => {        
         this.OPERACIONES = res;
       },
       error: (err) => console.error(err)

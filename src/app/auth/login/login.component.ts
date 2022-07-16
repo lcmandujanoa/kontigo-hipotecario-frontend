@@ -17,16 +17,14 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  INGRESAR() {
-    this.ROUTER_SERVICE.navigate(['/operations']); 
-    // console.log(this.USUARIO);
-    // this.AUTH_SERVICE.LOGUEAR_USUARIO(this.USUARIO).subscribe({
-    //   next: (res) => {
-    //     console.log(res),
-    //     this.ROUTER_SERVICE.navigate(['/operations']); 
-    //   },
-    //   error: (err) => console.error(err.error.message)
-    // })
+  INGRESAR() {    
+    this.AUTH_SERVICE.LOGUEAR_USUARIO(this.USUARIO).subscribe({
+      next: (res) => {
+        localStorage.setItem('TOKEN', res.TOKEN);
+        this.ROUTER_SERVICE.navigate(['/operations']); 
+      },
+      error: (err) => console.error(err.error.message)
+    })
   }
 
 }

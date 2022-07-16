@@ -9,6 +9,7 @@ import { ProductosComponent } from './productos/productos.component';
 // import { ClientListComponent } from './clients/client-list/client-list.component';
 import { OperationListComponent } from './operations/operation-list/operation-list.component';
 import { OperationComponent } from './operations/operation/operation.component';
+import { AuthGuard } from '../guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -17,7 +18,8 @@ const routes: Routes = [
     children: [
       { path: '', component: OperationListComponent },
       { path: 'operation', component: OperationComponent }
-    ]
+    ],
+    canActivate: [AuthGuard]
   },
   // {
   //   path: 'clients',
